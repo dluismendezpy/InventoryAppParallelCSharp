@@ -14,7 +14,7 @@ namespace InvertAppParallel
         {
             Console.WriteLine("Agregar categoria" +
                               "\n\nIntroduce el nombre de la categoria...");
-            String categoria = Console.ReadLine();
+            string categoria = Console.ReadLine();
 
             using (var db = new InverAppHomeworkDBContext())
             {

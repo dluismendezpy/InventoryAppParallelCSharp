@@ -8,6 +8,7 @@ namespace InvertAppParallel
     {
 
         Category categoria = new Category();
+        Products producto = new Products();
 
         public void mantenimientoCategorias()
         {
@@ -40,9 +41,9 @@ namespace InvertAppParallel
                     break;
                 case 5:
                     Console.Clear();
-                    Console.WriteLine("Adios, espero que vuelvas pronto. Presiona cualquier tecla para salir...");
+                    Console.WriteLine("Adios, espero que vuelvas pronto. Presiona cualquier tecla para volver...");
                     Console.ReadKey();
-                    Environment.Exit(0);
+                    mantenimientoCategorias();
                     break;
             }
 
@@ -50,7 +51,40 @@ namespace InvertAppParallel
 
         public void mantenimientoProductos()
         {
+            Console.WriteLine("InverApp - Productos" +
+                              "\n\nIntroduce el numero con la opcion deseada... " +
+                              "\n\n1. Agregar producto" +
+                              "\n2. Editar producto" +
+                              "\n3. Eliminar producto" +
+                              "\n4. Listar producto" +
+                              "\n5. Volver atras");
+            int opcProducto = int.Parse(Console.ReadLine());
 
+            switch (opcProducto)
+            {
+                case 1:
+                    Console.Clear();
+                    producto.AgregarProducto();
+                    break;
+                case 2:
+                    Console.Clear();
+                    
+                    break;
+                case 3:
+                    Console.Clear();
+                    
+                    break;
+                case 4:
+                    Console.Clear();
+                    
+                    break;
+                case 5:
+                    Console.Clear();
+                    Console.WriteLine("Adios, espero que vuelvas pronto. Presiona cualquier tecla para volver...");
+                    Console.ReadKey();
+                    mantenimientoProductos();
+                    break;
+            }
         }
 
         public void entradaInventario()
