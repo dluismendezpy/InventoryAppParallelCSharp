@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvertAppParallel", "InvertAppParallel\InvertAppParallel.csproj", "{B14F1C96-6ABD-4FF7-B31A-4F841EAA99C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{55C00851-4714-4404-A654-D7A04229FFEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B14F1C96-6ABD-4FF7-B31A-4F841EAA99C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B14F1C96-6ABD-4FF7-B31A-4F841EAA99C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B14F1C96-6ABD-4FF7-B31A-4F841EAA99C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B14F1C96-6ABD-4FF7-B31A-4F841EAA99C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55C00851-4714-4404-A654-D7A04229FFEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55C00851-4714-4404-A654-D7A04229FFEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55C00851-4714-4404-A654-D7A04229FFEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55C00851-4714-4404-A654-D7A04229FFEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6FA5BE5-C99B-4DD3-B466-5F2021F5AA7C}
+	EndGlobalSection
+EndGlobal
