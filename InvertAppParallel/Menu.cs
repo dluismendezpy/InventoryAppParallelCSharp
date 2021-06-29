@@ -76,7 +76,7 @@ namespace InvertAppParallel
                     break;
                 case 4:
                     Console.Clear();
-                    
+                    producto.ListarProductos();
                     break;
                 case 5:
                     Console.Clear();

@@ -1,7 +1,9 @@
 ﻿using Database.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace InvertAppParallel
 {
@@ -35,5 +37,21 @@ namespace InvertAppParallel
             }
         }
 
+        public void ListarProductos()
+        {
+            using (var db = new InverAppHomeworkDBContext())
+            {
+                var data2 = db.Products.ToList();
+
+                Parallel.ForEach(data2, producto =>
+                {
+                    Console.WriteLine($"ID: {producto.ProductId} --- " +
+                                      $"Nombre: {producto.ProductName} --- " +
+                                      $"Precio: {producto.ProductPrice} --- " +
+                                      $"Cantidad: {producto.ProductAmount}");
+                });
+            }
+        }
+    
     }
 }
