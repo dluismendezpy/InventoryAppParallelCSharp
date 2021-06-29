@@ -32,6 +32,7 @@ namespace InvertAppParallel
                     break;
                 case 3:
                     Console.Clear();
+                    categoria.EliminarCategoria();
                     break;
                 case 4:
                     Console.Clear();

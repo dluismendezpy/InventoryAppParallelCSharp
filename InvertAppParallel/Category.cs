@@ -61,5 +61,20 @@ namespace InvertAppParallel
             }
         }
 
+        public void EliminarCategoria()
+        {
+
+            Console.WriteLine("Introduce el id de una categoria para eliminar...");
+            int idCategoryEliminar = int.Parse(Console.ReadLine());
+
+            using (var db = new InverAppHomeworkDBContext())
+            {
+                var data1 = db.Categories.First(a => a.CategoryId == idCategoryEliminar);
+                db.Categories.Remove(data1);
+                db.SaveChanges();
+
+            }
+        }
+
     }
 }
