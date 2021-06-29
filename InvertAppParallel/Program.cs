@@ -6,7 +6,6 @@ namespace InvertAppParallel
     {
         static void Main(string[] args)
         {
-            Menu menu = new Menu();
 
             Console.WriteLine("InverApp" +
                               "\n\nIntroduce el numero con la opcion deseada... " +
@@ -21,19 +20,19 @@ namespace InvertAppParallel
             {
                 case 1:
                     Console.Clear();
-                    menu.mantenimientoCategorias();
+                    Menu.mantenimientoCategorias();
                     break;
                 case 2:
                     Console.Clear();
-                    menu.mantenimientoProductos();
+                    Menu.mantenimientoProductos();
                     break;
                 case 3:
                     Console.Clear();
-                    menu.entradaInventario();
+                    Menu.entradaInventario();
                     break;
                 case 4:
                     Console.Clear();
-                    menu.salidaInventario();
+                    Menu.salidaInventario();
                     break;
                 case 5:
                     Console.Clear();

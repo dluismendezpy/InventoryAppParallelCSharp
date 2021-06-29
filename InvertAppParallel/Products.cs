@@ -81,5 +81,41 @@ namespace InvertAppParallel
             }
         }
     
+        public void EliminarProducto()
+        {
+            Console.WriteLine("LISTADO DE PRODUCTOS");
+            Console.WriteLine("\n");
+            ListarProductos();
+            Console.WriteLine("Introduce el id de un producto para eliminar...");
+            int idProductEliminar = int.Parse(Console.ReadLine());
+
+            using (var db = new InverAppHomeworkDBContext())
+            {
+                Console.WriteLine("Estas seguro que quieres eliminar este producto Y/N?");
+                string yesNo = Console.ReadLine();
+
+                if (yesNo == "Y" || yesNo == "y")
+                {
+                    var data4 = db.Products.First(a => a.ProductId == idProductEliminar);
+                    db.Products.Remove(data4);
+                    db.SaveChanges();
+                }
+                else if (yesNo == "N" || yesNo == "n")
+                {
+                    Console.Clear();
+                    Menu.mantenimientoProductos();
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("Has introducido una tecla incorrecta. Vuelve a intentarlo." +
+                                       "Presiona cualquier tecla para salir...");
+                    Menu.mantenimientoProductos();
+                    Console.ReadKey();
+                }
+
+            }
+        }
+
     }
 }

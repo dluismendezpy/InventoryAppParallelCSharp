@@ -6,11 +6,10 @@ namespace InvertAppParallel
 {
     public class Menu
     {
+        private static Category categoria = new Category();
+        private static Products producto = new Products();
 
-        Category categoria = new Category();
-        Products producto = new Products();
-
-        public void mantenimientoCategorias()
+        public static void mantenimientoCategorias()
         {
             Console.WriteLine("InverApp - Categorias" +
                               "\n\nIntroduce el numero con la opcion deseada... " +
@@ -49,7 +48,7 @@ namespace InvertAppParallel
 
         }
 
-        public void mantenimientoProductos()
+        public static void mantenimientoProductos()
         {
             Console.WriteLine("InverApp - Productos" +
                               "\n\nIntroduce el numero con la opcion deseada... " +
@@ -72,7 +71,7 @@ namespace InvertAppParallel
                     break;
                 case 3:
                     Console.Clear();
-                    
+                    producto.EliminarProducto();
                     break;
                 case 4:
                     Console.Clear();
@@ -87,12 +86,12 @@ namespace InvertAppParallel
             }
         }
 
-        public void entradaInventario()
+        public static void entradaInventario()
         {
 
         }
 
-        public void salidaInventario()
+        public static void salidaInventario()
         {
 
         }
