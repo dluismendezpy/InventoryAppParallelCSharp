@@ -9,6 +9,7 @@ namespace InvertAppParallel
         private static Category categoria = new Category();
         private static Products producto = new Products();
         private static EntradaInventario EntradaInventario = new EntradaInventario();
+        private static SalidaInventario SalidaInventario = new SalidaInventario();
 
         public static void mantenimientoCategorias()
         {
@@ -94,7 +95,7 @@ namespace InvertAppParallel
 
         public static void salidaInventario()
         {
-
+            SalidaInventario.Salida();
         }
 
     }
