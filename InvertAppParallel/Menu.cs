@@ -28,6 +28,7 @@ namespace InvertAppParallel
                     break;
                 case 2:
                     Console.Clear();
+                    categoria.EditarCategoria();
                     break;
                 case 3:
                     Console.Clear();
@@ -38,7 +39,7 @@ namespace InvertAppParallel
                     break;
                 case 5:
                     Console.Clear();
-                    Console.WriteLine("Adios, espero que vuelvas pronto. PResiona cualquier tecla para salir...");
+                    Console.WriteLine("Adios, espero que vuelvas pronto. Presiona cualquier tecla para salir...");
                     Console.ReadKey();
                     Environment.Exit(0);
                     break;

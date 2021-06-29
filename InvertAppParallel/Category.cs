@@ -27,14 +27,36 @@ namespace InvertAppParallel
 
         }
 
+        public void EditarCategoria()
+        {
+            Console.WriteLine("LISTADO DE CATEGORIAS");
+            Console.WriteLine("\n");
+            ListarCategoria();
+            Console.WriteLine("Introduce el id de una categoria para editar...");
+            int idCategory = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Introduce el nombre de la categoria");
+            string newNameCategory = Console.ReadLine();
+
+            using (var db = new InverAppHomeworkDBContext())
+            {
+                var data = db.Categories.First(d => d.CategoryId == idCategory);
+
+                data.CategoryName = newNameCategory;
+
+                db.SaveChanges();
+            }
+        }
+
         public void ListarCategoria()
         {
             using (var db = new InverAppHomeworkDBContext())
             {
                 var data1 = db.Categories.ToList();
-                Parallel.ForEach(data1, categorias =>
+
+                Parallel.ForEach(data1, categoria =>
                 {
-                    Console.WriteLine($"ID: {categorias.CategoryId} --- Categoria: {categorias.CategoryName}");
+                    Console.WriteLine($"ID: {categoria.CategoryId} --- Categoria: {categoria.CategoryName}");
                 });
             }
         }
