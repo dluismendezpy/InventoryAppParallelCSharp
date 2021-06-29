@@ -37,6 +37,34 @@ namespace InvertAppParallel
             }
         }
 
+        public void EditarProducto()
+        {
+            Console.WriteLine("LISTADO DE PRODUCTOS");
+            Console.WriteLine("\n");
+            ListarProductos();
+            Console.WriteLine("Introduce el id de un producto para editar...");
+            int idProduct = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Introduce el nuevo nombre del producto...");
+            string newNameProduct = Console.ReadLine();
+
+            Console.WriteLine($"Introduce el nuevo precio para {newNameProduct}...");
+            int newPriceProduct = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Introduce la cantidad de unidades/libras de {newNameProduct}...");
+            int newAmountProduct = int.Parse(Console.ReadLine());
+
+            using (var db = new InverAppHomeworkDBContext())
+            {
+                var data3 = db.Products.First(d => d.ProductId == idProduct);
+                data3.ProductName = newNameProduct;
+                data3.ProductPrice = newPriceProduct;
+                data3.ProductAmount = newAmountProduct;
+
+                db.SaveChanges();
+            }
+        }
+
         public void ListarProductos()
         {
             using (var db = new InverAppHomeworkDBContext())
